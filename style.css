@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui; /*system-ui si la police Poppins n'est pas disponible*/  
+}
+
+/* -------HEADER ---------*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color : #fff;
+    font-size : 1 rem;
+}
+
+a:hover {
+    color :#c72c48;
+}
+
+header{
+    position: fixed; /*pour fixer la nav bar en haut de l'écran*/
+    top: 0;
+    left: 0;
+    right: 0;
+    padding : 0 2rem;
+    background-color: rgba(0,0,0,0.300);
+    z-index: 9999;
+    
+}
+
+.nav{
+    width: 100%;
+    max-width: 1200px;
+    height: 60px ;
+    margin: 0 auto;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between ;
+    
+}
+
+.nav .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.nav .links {
+    display: flex;
+    gap : 2rem;
+    
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.action-button{     /*cv et se contacter*/
+    background-color:aliceblue;
+    color:black;
+    border : 1px solid aliceblue;
+    padding : 0.5rem 1.2rem ;
+    border-radius : 5px ;
+    outline: none;
+    font-size : 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.action-button:hover{
+    color:aliceblue;
+    border : 1px solid aliceblue;
+    transition: 0.5s all;
+}
+
+.cv{
+    background-color: transparent;
+    color:#fff;
+    border : 1px #fff;
+}
+
+.cv:hover{
+    background-color: aliceblue;
+    color :black;
+}
+
+.contacter:hover{
+    background-color:transparent;
+    color :aliceblue;
+}
+
+/* -------BURGER MENU---------*/
+
+.burger-menu{
+    display:none;  /*pas affiché de base*/
+    height: 300px;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px); /*floute l'arriere plan dans un rayon de 5px*/
+    border-radius: 10px; 
+    overflow: hidden; /*masque le contenu qui dépasse*/
+}
+
+.burger-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem ;
+}
+
+.burger-menu .action-button {
+    width : 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.buttons-burger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
+}
+.burger-button{
+    display:none;
+    position: absolute ;
+    top:10px;
+    right:10px;
+    color :#fff;
+    
+
+}
+.input-burger-checkbox{
+    visibility: hidden; /*invisible*/
+}
+
+#burger-checkbox:checked ~ .burger-menu { /*si la checkbox est activé, burger-menu est affiché*/
+    display: block; 
+}
+/* -------WELCOM---------*/
+
+.welcom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f56b0;
+    position: fixed;
+}
+
+.annimation {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: #fff;
+    display: inline-block;
+    animation: fadeIn 1.5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.first {
+    display: inline-block;
+    font-weight: 500;
+    animation: firstSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    position: relative;
+    z-index: 1;
+}
+
+.slide {
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.second {
+    font-weight: 300;
+    display: inline-block;
+    animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes firstSpan {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes secondSpan {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.presentation{
+    opacity: 0;
+    transform: scale(0.99);
+    animation: showDiv 1.75s ease-in-out 1s forwards;
+}
+.presentation p{
+    color: #fff;
+}
+
+@keyframes showDiv {
+    0% {
+        opacity: 0;
+        transform: scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.savoir{
+    margin-top: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.savoir:hover{
+    background-color:transparent;
+    color :aliceblue;
+}
+
+/* -------A PROPOS---------*/
+.trans{
+    position: absolute;
+    top: 100vh;
+    height: 200px;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 200px;
+}
+.propos{
+    position: absolute;
+    top: 140%;
+    height: 1000px; 
+    width: 100%;
+    left: 0;
+    background-color: #549dda;
+    padding: 0;
+    margin: 0;
+
+}
+.divider-containers {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #549dda;
+    margin-top: 6%;
+}
+
+.dividers {
+    flex: 1;
+    height: 2px;
+    background-color: white;
+    margin: 0 10px;
+}
+
+.title {
+    font-size: 2rem; 
+    font-weight: bold;
+    color:white;
+}
+/* -------RESPONSIVE---------*/
+
+@media (max-width : 990px){
+    header{
+        background:none;
+        background-color: rgba(0,0,0,0.300);
+    }
+    .nav .links,
+    .nav .action-button{
+        display: none;
+    }
+    .burger-button{
+        display: block;
+    }
+
+}
+@media (max-width : 768px){
+ 
+}
