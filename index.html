@@ -10,73 +10,130 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<title>Portfolio</title>
 	</head>
-    <header>
-        <!--Bar de Navigation-->
-        <div class="nav">
-            <div class="logo">
-                <a href="#">Portfolio</a>
-            </div>
-            
-            <ul class="links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A Propos</a></li>
-                <li><a href="#">Projets</a></li>
-            </ul>
-            <div class=" buttons">
-                <a href=".html" class="action-button cv">CV</a>
-                <a href=".html" class="action-button contacter">Me contacter</a>
+    <body>
+        <div class="main">
+        <header>
+            <!--Bar de Navigation-->
+            <div class="nav">
+                <div class="logo">
+                    <a href="#">Portfolio</a>
+                </div>
+                
+                <ul class="links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#propo">A Propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                </ul>
+                <div class=" buttons">
+                    <a href=".html" class="action-button cv">CV</a>
+                    <a href=".html" class="action-button contacter">Me contacter</a>
 
+                </div>
+            </div>
+            <!--Burger Menu-->
+            <div class="burger-button">
+            <input type="checkbox" id="burger-checkbox" class="input-burger-checkbox"/>
+            <label for="burger-checkbox" class="burger-button">☰</label>
+            
+            <nav class="burger-menu">
+                <ul class="links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#propo">A Propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                </ul>
+                <div class="divider"></div>
+                <div class=" buttons-burger-menu">
+                    <a href=".html" class="action-button cv">CV</a>
+                    <a href=".html" class="action-button contacter">Me Contacter</a>
+                </div>
+            </nav>
+            </div>
+        </header>
+        <div class ="welcom">
+            <div class="annimation">
+                <span class = "first">Elric</span>
+                <span class="slide">
+                    <span class = "second">Dufresne</span>
+                </span>
+            </div>
+            <div class="presentation">
+                <p>Etudiant en BUT Informatique</p>
+                <a href="#propos" class="action-button savoir">En savoir plus -></a>
             </div>
         </div>
-        <!--Burger Menu-->
-        <div class="burger-button">
-        <input type="checkbox" id="burger-checkbox" class="input-burger-checkbox"/>
-        <label for="burger-checkbox" class="burger-button">☰</label>
+    </div>
+            <div class="trans">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1450">
+                    <path fill="#549dda" fill-opacity="1" d="M0,192L48,192C96,192,192,192,288,160C384,128,480,64,576,42.7C672,21,768,43,864,90.7C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,1450L1392,1450C1344,1450,1248,1450,1152,1450C1056,1450,960,1450,864,1450C768,1450,672,1450,576,1450C480,1450,384,1450,288,1450C192,1450,96,1450,48,1450L0,1450Z"></path>
+                </svg>
+            </div>
         
-        <nav class="burger-menu">
-            <ul class="links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A Propos</a></li>
-                <li><a href="#">Projets</a></li>
-            </ul>
-            <div class="divider"></div>
-            <div class=" buttons-burger-menu">
-                <a href=".html" class="action-button cv">CV</a>
-                <a href=".html" class="action-button contacter">Me Contacter</a>
+            <div id="propos">
+                <div class="divider-containers">
+                    <div class="dividers"></div>
+                    <h2 class="title">A propos</h2>
+                    <div class="dividers"></div>
+                </div>
+                
+                <div class="item-about-me">
+                    <div class="about-me-desc">
+                        <h2 class ="presentation">Presentation</h2>
+                        <p>Je m'appelle Elric Dufresne, passionné d'informatique depuis tout petit. J'ai donc déscider de réaliser mes études dans ce domaine, actuellement en BUT informatique sur Nantes.</p>
+                    </div>
+                    <div class="about-bar">
+                        <div class="dividers1"></div>
+                        <i class="fa-solid fa-user"></i>
+                        <div class="dividers1"></div>
+                    </div>
+
+                </div>
+                <div class="item-parcours">
+                    <div class="parcours-bar">
+                        <div class="dividers1"></div>
+                        <i class="fa-solid fa-building-columns"></i>
+                        <div class="dividers1"></div>
+                    </div>
+                    <div class="parcours-desc">
+                        <h2>Parcours</h2>
+                        <ul>
+                            <li>
+                                <div class="etablissement">
+                                    <h4>Lycée Caroline Aigle</h4>
+                                    <h6>sept. 2021-Juin 2022</h6>
+                                </div>
+                                <p>Obtention du Baccalauréat général, spécialités Mathématiques et Physique-Chimie en Première, puis Mathématiques et Numérique et Sciences Informatiques (NSI) en Terminale avec mention Bien.</p>
+                            </li>
+                            <li>
+                                <div class="etablissement">
+                                    <h4>IUT Marechal Joffre</h4>
+                                    <h6>sept. 2024-Aujourd'hui</h6>
+                                </div>
+                                <p>Actuellement en première année de BUT informatique à l'IUT Marechal Joffre à Nantes.</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="item-skills">
+                        <div class="skills-desc">
+                            <h2>Skills</h2>
+                            <div class="skills-grid">
+                                <div class="python"><i class="fa-brands fa-python"></i><h4>Python</h4></div>
+                                <div class="html"><i class="fa-brands fa-html5"></i><h4>HTML</h4></div>
+                                <div class="css"><i class="fa-brands fa-css3"></i><h4>CSS</h4></div>
+                                <div class="sql"><i class="fa-solid fa-database"></i><h4>My SQL</h4></div>
+                                <div class="git"><i class="fab fa-github"></i><h4>GIT</h4></div>
+                                <div class="go"><i class="fa-brands fa-golang"></i><h4>Golang</h4></div>
+                            </div>
+                        </div>
+                        <div class="skills-bar">
+                            <div class="dividers1"></div>
+                            <i class="fa-solid fa-building-columns"></i>
+                            <div class="dividers1"></div>
+                        </div>
+                </div>
             </div>
-        </nav>
-        </div>
-    </header>
-    <div class ="welcom">
-        <div class="annimation">
-            <span class = "first">Elric</span>
-            <span class="slide">
-                <span class = "second">Dufresne</span>
-            </span>
-        </div>
-        <div class="presentation">
-            <p>Etudiant en BUT Informatique</p>
-            <a href="#" class="action-button savoir">En savoir plus -></a>
-        </div>
-    </div>
-    <div>
-        <div class="trans">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1450">
-                <path fill="#549dda" fill-opacity="1" d="M0,192L48,192C96,192,192,192,288,160C384,128,480,64,576,42.7C672,21,768,43,864,90.7C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,1450L1392,1450C1344,1450,1248,1450,1152,1450C1056,1450,960,1450,864,1450C768,1450,672,1450,576,1450C480,1450,384,1450,288,1450C192,1450,96,1450,48,1450L0,1450Z"></path>
-            </svg>
-        </div>
-        <div class="propos">
-            <div class="divider-containers">
-                <div class="dividers"></div>
-                <h2 class="title">A propos</h2>
-                <div class="dividers"></div>
-            </div>
-            <div class="avout-me">
-                <h2><strong>Presentation</strong></h2>
-                <p>Je m'appelle Elric Dufresne, passionné d'informatique depuis tout petit. J'ai donc déscider de réaliser mes études dans ce domaine, actuellement en BUT informatique sur Nantes.</p>
-            </div>
-        </div>
-    </div>
     
+    </body>
     
 </html>

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -259,6 +263,10 @@ header{
     justify-content: center;
     align-items: center;
 }
+.main {
+    position: absolute;
+    height: 100vh;
+}
 .savoir:hover{
     background-color:transparent;
     color :aliceblue;
@@ -276,10 +284,10 @@ header{
     margin: 0;
     margin-bottom: 200px;
 }
-.propos{
+#propos{
     position: absolute;
     top: 140%;
-    height: 1000px; 
+    height: 2000px; 
     width: 100%;
     left: 0;
     background-color: #549dda;
@@ -293,6 +301,10 @@ header{
     align-items: center;
     background-color: #549dda;
     margin-top: 6%;
+    animation: title linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
 }
 
 .dividers {
@@ -306,7 +318,233 @@ header{
     font-size: 2rem; 
     font-weight: bold;
     color:white;
+    
 }
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: scale(0.0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.item-about-me{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    min-height: 200px;
+    margin-left:auto ;
+    margin-top: 5%;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-right: 2%;
+    animation: item-keyframe linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
+    
+}
+
+@keyframes item-keyframe {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    100% {
+        opacity: 1;
+        scale: 1.0;
+        
+    }
+}
+.about-me-desc{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: end;
+    text-align: end;
+    margin-left: 5%;
+}
+.about-me-desc h2{
+    color : transparent;
+    -webkit-text-stroke: 1px #1f56b0;
+    position: relative;
+    font-size: 2rem;
+    width: 14rem;
+}
+.about-me-desc h2::before{
+    content:"Presentation";
+    position: absolute;
+    width: 0;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #1f56b0;
+    border-right: 5px solid #1f56b0;
+    transition: 1s ease-in-out;
+}
+.about-me-desc h2:hover::before{
+    width: 100%;
+
+    
+}
+
+.about-bar{
+    display: flex;
+    width: 50px;
+    height: auto;
+    margin-right: 8%;
+    margin-left:8% ;
+    align-items: center;
+    flex-direction: column;
+}
+.dividers1{
+    width: 2px;
+    background-color: #1f56b0;
+    height: 50px;
+    align-self: center;
+    
+}
+.fa-solid{
+    display: block;
+    color: #1f56b0;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item-parcours{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    min-height: 275px;
+    margin-right:auto ;
+    margin-top: 5%;
+    margin-left: 2%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.parcours-desc{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items:start;
+    text-align: start;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+.parcours-bar{
+    display: flex;
+    width: 50px;
+    height: auto;
+    margin-right: 8%;
+    margin-left:8% ;
+    align-items: center;
+    flex-direction: column;
+}
+.parcours-desc h2{
+    color : transparent;
+    -webkit-text-stroke: 1px #1f56b0;
+    position: relative;
+    font-size: 2rem;
+    width: 14rem;
+}
+.parcours-desc h2::before{
+    content:"Parcours";
+    position: absolute;
+    width: 0;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #1f56b0;
+    border-right: 5px solid #1f56b0;
+    transition: 1s ease-in-out;
+}
+.parcours-desc h2:hover::before{
+    width: 100%;
+}
+.etablissement{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    gap: 10px;
+}
+
+.item-skills{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    min-height: 200px;
+    margin-left:auto ;
+    margin-top: 5%;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-right: 2%;
+}
+.skills-desc{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: end;
+    text-align: end;
+    margin-left: 5%;
+}
+.skills-bar{
+    display: flex;
+    width: 50px;
+    height: auto;
+    margin-right: 8%;
+    margin-left:8% ;
+    align-items: center;
+    flex-direction: column;
+}
+.skills-desc h2{
+    color : transparent;
+    -webkit-text-stroke: 1px #1f56b0;
+    position: relative;
+    font-size: 2rem;
+    width: 5rem;
+}
+.skills-desc h2::before{
+    content:"Skills";
+    position: absolute;
+    width: 0;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #1f56b0;
+    border-right: 5px solid #1f56b0;
+    transition: 1s ease-in-out;
+}
+.skills-desc h2:hover::before{
+    width: 100%;
+
+    
+}
+.skills-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
+
+
+
+
+
+
 /* -------RESPONSIVE---------*/
 
 @media (max-width : 990px){
