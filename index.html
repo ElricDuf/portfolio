@@ -82,7 +82,7 @@
                     </div>
                     <div class="about-bar">
                         <div class="dividers1"></div>
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user bar-icon"></i>
                         <div class="dividers1"></div>
                     </div>
 
@@ -90,7 +90,7 @@
                 <div class="item-parcours">
                     <div class="parcours-bar">
                         <div class="dividers1"></div>
-                        <i class="fa-solid fa-building-columns"></i>
+                        <i class="fa-solid fa-building-columns bar-icon"></i>
                         <div class="dividers1"></div>
                     </div>
                     <div class="parcours-desc">
@@ -118,19 +118,52 @@
                         <div class="skills-desc">
                             <h2>Skills</h2>
                             <div class="skills-grid">
-                                <div class="python"><i class="fa-brands fa-python"></i><h4>Python</h4></div>
-                                <div class="html"><i class="fa-brands fa-html5"></i><h4>HTML</h4></div>
-                                <div class="css"><i class="fa-brands fa-css3"></i><h4>CSS</h4></div>
-                                <div class="sql"><i class="fa-solid fa-database"></i><h4>My SQL</h4></div>
-                                <div class="git"><i class="fab fa-github"></i><h4>GIT</h4></div>
-                                <div class="go"><i class="fa-brands fa-golang"></i><h4>Golang</h4></div>
+                                <div class="skill-box"><i class="fa-brands fa-python icon"></i><h4>Python</h4></div>
+                                <div class="skill-box"><i class="fa-brands fa-html5 icon"></i><h4>HTML</h4></div>
+                                <div class="skill-box"><i class="fa-brands fa-css3 icon"></i><h4>CSS</h4></div>
+                                <div class="skill-box"><i class="fa-regular fa-database icon"></i><h4>My SQL</h4></div>
+                                <div class="skill-box"><i class="fab fa-github icon"></i><h4>GIT</h4></div>
+                                <div class="skill-box"><i class="fa-brands fa-golang icon"></i><h4>Golang</h4></div>
                             </div>
                         </div>
                         <div class="skills-bar">
                             <div class="dividers1"></div>
-                            <i class="fa-solid fa-building-columns"></i>
+                            <i class="fa-solid fa-building-columns bar-icon"></i>
                             <div class="dividers1"></div>
                         </div>
+                    </div>
+                    <div class="item-download">
+                        <h2>Telecharger mon CV :</h2>
+                        <div href='cv-dufresne-elric.pdf' download class="button">
+                            <div class="content">
+                                <i class="fa-solid fa-download download-icon"></i>
+                                <span class="button-text">Telecharger</span>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+
+                            let button = document.querySelector(".button");
+                            button.addEventListener("click",()=>{
+                                button.classList.add("active");
+
+                                setTimeout(()=>{
+                                    button.classList.remove("active");
+                                    document.querySelector(".download-icon").classList.replace("fa-download","fa-circle-check");
+                                    document.querySelector(".button-text").innerText = "Terminer";
+                                    const pdfUrl = './cv-dufresne-elric.pdf';
+                                    const a = document.createElement('a');
+                                    a.href = pdfUrl;
+                                    a.download = 'cv-dufresne-elric.pdf';
+                                    a.click();
+                                },6000)
+                                
+
+                            })
+
+
+                        </script>
+                    </div>
                 </div>
             </div>
     
