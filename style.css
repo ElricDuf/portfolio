@@ -21,8 +21,20 @@ a{
     font-size : 1 rem;
 }
 
-a:hover {
-    color :#c72c48;
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Distance du soulignement par rapport au texte */
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+  
+a:hover::after {
+    width: 100%;
 }
 
 header{
@@ -287,7 +299,7 @@ header{
 #propos{
     position: absolute;
     top: 140%;
-    height: 2000px; 
+    height: 3000px; 
     width: 100%;
     left: 0;
     background-color: #549dda;
@@ -296,6 +308,7 @@ header{
 
 }
 .divider-containers {
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -305,6 +318,13 @@ header{
     animation-range-start: cover 0%;
     animation-range-end: cover 30%;
     animation-timeline: view();
+}
+#cv{
+    background-color: #1f56b0;
+}
+#dividers-projet{
+    top:0;
+    background-color: #1f56b0;
 }
 
 .dividers {
@@ -340,7 +360,8 @@ header{
     min-height: 200px;
     margin-left:auto ;
     margin-top: 5%;
-    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #ededee);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     margin-right: 2%;
     animation: item-keyframe linear;
@@ -374,7 +395,6 @@ header{
     -webkit-text-stroke: 1px #1f56b0;
     position: relative;
     font-size: 2rem;
-    width: 14rem;
 }
 .about-me-desc h2::before{
     content:"Presentation";
@@ -385,7 +405,6 @@ header{
     height: 100%;
     overflow: hidden;
     color: #1f56b0;
-    border-right: 5px solid #1f56b0;
     transition: 1s ease-in-out;
 }
 .about-me-desc h2:hover::before{
@@ -427,8 +446,24 @@ header{
     margin-right:auto ;
     margin-top: 5%;
     margin-left: 2%;
-    background-color: #fff;
+    background: linear-gradient(to left, #ffffff, #ededee);
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: item-parcours linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
+}
+@keyframes item-parcours  {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    100% {
+        opacity: 1;
+        scale: 1.0;
+        
+    }
 }
 .parcours-desc{
     display: flex;
@@ -454,7 +489,7 @@ header{
     -webkit-text-stroke: 1px #1f56b0;
     position: relative;
     font-size: 2rem;
-    width: 14rem;
+
 }
 .parcours-desc h2::before{
     content:"Parcours";
@@ -465,18 +500,23 @@ header{
     height: 100%;
     overflow: hidden;
     color: #1f56b0;
-    border-right: 5px solid #1f56b0;
+    
     transition: 1s ease-in-out;
 }
 .parcours-desc h2:hover::before{
     width: 100%;
+    
 }
+
 .etablissement{
     display: flex;
     align-items: flex-end;
     margin-top: 4%;
     margin-bottom: 2%;
     gap: 10px;
+}
+.etablissement h6{
+    font-weight: 600;
 }
 
 .item-skills{
@@ -487,9 +527,25 @@ header{
     min-height: 200px;
     margin-left:auto ;
     margin-top: 5%;
-    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #ededee);
     border-radius: 8px;
     margin-right: 2%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: item-skill linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
+}
+@keyframes item-skill{
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    100% {
+        opacity: 1;
+        scale: 1.0;
+        
+    }
 }
 .skills-desc{
     display: flex;
@@ -510,14 +566,13 @@ header{
     flex-direction: column;
 }
 .bar-icon{
-    font-size: 30px;
+    font-size: 20px;
 }
 .skills-desc h2{
     color : transparent;
     -webkit-text-stroke: 1px #1f56b0;
     position: relative;
-    font-size: 2rem;
-    width: 5rem;
+    font-size: 2rem;    
 }
 .skills-desc h2::before{
     content:"Skills";
@@ -528,7 +583,6 @@ header{
     height: 100%;
     overflow: hidden;
     color: #1f56b0;
-    border-right: 5px solid #1f56b0;
     transition: 1s ease-in-out;
 }
 .skills-desc h2:hover::before{
@@ -545,6 +599,7 @@ header{
     margin-bottom: 3%;
 }
 .skill-box{
+    width: 120px;
     border: 2px solid #007bff; 
     color: #007bff;
     padding: 12px 25px;
@@ -563,35 +618,52 @@ header{
     justify-content: center;
     align-items: center;
 }
+.wave{
+    padding-top: 0vh;
+}
+.download{
+    display: block;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 1000px;
+    top:0;
+}
+.top-download{
+    margin-top: 5%;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.download p{
+    color: #fff;
+}
 .item-download{
     display:flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 100%;
     min-height: 200px;
-    margin:5% auto;
-    border: 2px solid#fff;
-    border-radius: 8px;
+    margin-top: -30px;
+    background-color: #1f56b0;
 }
 .button{
-    display: flex;
-    justify-content: center;
-    align-items: center; /* -----fait que ce n'esrt pas centrer ----*/
-    height: 95px;
-    width: 360px;
-    background-color: #1f56b0;
-    border-radius: 55px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    
+     /* -----fait que ce n'esrt pas centrer ----*/
+    margin-left:2%;
     transition: all 0.4s cubic-bezier(0.68,-0.55,0.256,1.55);
-    cursor:pointer ;
     overflow: hidden;
     position: relative;
+    height: 40px;
 }
 .button.active{
     height: 20px ;
-    width: 90%;
+    width: 40%;
 }
 .button::before{
     content: '';
@@ -611,6 +683,19 @@ header{
         left:0%;
     }
 }
+.action-button.button:hover{
+    background-color:transparent;
+    color :aliceblue;
+}
+.action-button.button:hover .button-text{
+    background-color:transparent;
+    color :aliceblue;
+}
+.action-button.button:hover .download-icon{
+    background-color:transparent;
+    color :aliceblue;
+}
+
 
 .button .content{
     height: 100%;
@@ -627,18 +712,22 @@ header{
 
 
 .download-icon{
-    color:#fff ;
+    color:black ;
+    margin-right: 8px;
 }
 .content .button-text{
-    color: #fff;
-    font-size: 40px;
-    font-weight: 500;
-}
-.content .button-text{
-    font-size: 28px;
-    margin-left: 8px;
+    color: black;
 }
 
+
+/* -------PROJETS---------*/
+
+.projets{
+    padding-top : 20vh;
+
+    background-color: #1f56b0;
+    display: flex;
+}
 
 
 
