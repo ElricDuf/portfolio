@@ -21,22 +21,6 @@ a{
     font-size : 1 rem;
 }
 
-
-a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* Distance du soulignement par rapport au texte */
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease-in-out;
-}
-  
-a:hover::after {
-    width: 100%;
-}
-
 header{
     position: fixed; /*pour fixer la nav bar en haut de l'écran*/
     top: 0;
@@ -63,6 +47,26 @@ header{
     font-size: 1.5rem;
     font-weight: bold;
     justify-content: left;
+}
+
+.nav .links li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav .links li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav .links li:hover::after {
+    width: 100%;
 }
 
 .nav .links {
@@ -298,7 +302,7 @@ header{
 }
 #propos{
     position: absolute;
-    top: 140%;
+    top: 130vh;
     height: 3000px; 
     width: 100%;
     left: 0;
@@ -627,7 +631,7 @@ header{
     text-align: center;
     justify-content: center;
     width: 100%;
-    min-height: 1000px;
+    min-height: 1500px;
     top:0;
 }
 .top-download{
@@ -637,6 +641,21 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: download-frames linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
+}
+@keyframes download-frames  {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    100% {
+        opacity: 1;
+        scale: 1.0;
+        
+    }
 }
 .download p{
     color: #fff;
@@ -728,14 +747,157 @@ header{
     background-color: #1f56b0;
     display: flex;
 }
+.item-projets{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: projet-frames linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+    animation-timeline: view();
+}
+@keyframes projet-frames  {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    100% {
+        opacity: 1;
+        scale: 1.0;
+        
+    }
+}
 
+.projet-box {
+    height: 600px;
+    width: 300px;
+    background-color: #ededee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
+.item-projets p {
+    color: black;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
+.item-projets bold{
+    color: #1f56b0;
+    font-weight: 650;
+}
 
+.item-projets h4 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+    text-align: center;
+}
+.item-projets i {
+    margin-top: 25px;
+    font-size: 35px;
+}
 
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
 
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+.image-container:hover img {
+    filter: brightness(75%);
+}
+
+.button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 200px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .button-overlay {
+    opacity: 1;
+}
+
+/* -------ME CONTACTER---------*/
+
+.item-contacter{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    animation: download-frames linear;
+    animation-range-start: cover 0%;
+    animation-range-end: cover 15%;
+    animation-timeline: view();
+}
+.icon-contact{
+    height: 60px;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+.contacter-divider{
+    width: 5px;
+    height: 100px;
+    background-color: #fff;
+}
 
 /* -------RESPONSIVE---------*/
+@media (max-width : 1200px){
+    #propos{
+        top: 120vh;
+    }
+    .item-about-me{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .item-parcours{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .item-skills{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (max-width : 780px){
+    #propos{
+        top: 112vh;
+    }
+}
+@media (max-width : 500px){
+    #propos{
+        top: 110vh;
+    }
+}
+
 
 @media (max-width : 990px){
     header{

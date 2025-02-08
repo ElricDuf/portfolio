@@ -21,12 +21,12 @@
                 
                 <ul class="links">
                     <li><a href="#">Accueil</a></li>
-                    <li><a href="#propo">A Propos</a></li>
-                    <li><a href="#">Projets</a></li>
+                    <li><a href="#propos">A Propos</a></li>
+                    <li><a href="#dividers-projet">Projets</a></li>
                 </ul>
                 <div class=" buttons">
-                    <a href=".html" class="action-button cv">CV</a>
-                    <a href=".html" class="action-button contacter">Me contacter</a>
+                    <a href="#cv" class="action-button cv">CV</a>
+                    <a href="#contacter" class="action-button contacter">Me contacter</a>
 
                 </div>
             </div>
@@ -38,13 +38,13 @@
             <nav class="burger-menu">
                 <ul class="links">
                     <li><a href="#">Accueil</a></li>
-                    <li><a href="#propo">A Propos</a></li>
-                    <li><a href="#">Projets</a></li>
+                    <li><a href="#propos">A Propos</a></li>
+                    <li><a href="#dividers-projet">Projets</a></li>
                 </ul>
                 <div class="divider"></div>
                 <div class=" buttons-burger-menu">
-                    <a href=".html" class="action-button cv">CV</a>
-                    <a href=".html" class="action-button contacter">Me Contacter</a>
+                    <a href="#cv" class="action-button cv">CV</a>
+                    <a href="#contacter" class="action-button contacter">Me Contacter</a>
                 </div>
             </nav>
             </div>
@@ -76,7 +76,7 @@
                 <div class="item-about-me">
                     <div class="about-me-desc">
                         <h2 class ="presentation">Presentation</h2>
-                        <p>Je m'appelle Elric Dufresne, passionné d'informatique depuis tout petit. J'ai donc déscider de réaliser mes études dans ce domaine, actuellement en BUT informatique sur Nantes.</p>
+                        <p>Passionné par l'informatique depuis de nombreuses années, j'ai choisi de m'orienter vers ce domaine après le Baccalauréat. Je suis donc actuellement en première année de BUT informatique</p>
                     </div>
                     <div class="about-bar">
                         <div class="dividers1"></div>
@@ -97,9 +97,9 @@
                             <li>
                                 <div class="etablissement">
                                     <h4>Lycée Caroline Aigle</h4>
-                                    <h6>sept. 2021-Juin 2022</h6>
+                                    <h6>sept. 2021-Juin 2024</h6>
                                 </div>
-                                <p>Obtention du Baccalauréat général, spécialités Mathématiques et Physique-Chimie en Première, puis Mathématiques et Numérique et Sciences Informatiques (NSI) en Terminale avec mention Bien.</p>
+                                <p>Obtention du Baccalauréat général, spécialités Mathématiques, Numérique et Sciences Informatiques (NSI), Physique-Chimie en Première, puis Mathématiques et NSI en Terminale, mention Bien.</p>
                             </li>
                             <li>
                                 <div class="etablissement">
@@ -116,17 +116,17 @@
                         <div class="skills-desc">
                             <h2>Skills</h2>
                             <div class="skills-grid">
-                                <div class="skill-box"><i class="fa-brands fa-python icon"></i><h4>Python</h4></div>
-                                <div class="skill-box"><i class="fa-brands fa-html5 icon"></i><h4>HTML</h4></div>
-                                <div class="skill-box"><i class="fa-brands fa-css3 icon"></i><h4>CSS</h4></div>
-                                <div class="skill-box"><i class="fa-regular fa-database icon"></i><h4>My SQL</h4></div>
-                                <div class="skill-box"><i class="fab fa-github icon"></i><h4>GIT</h4></div>
-                                <div class="skill-box"><i class="fa-brands fa-golang icon"></i><h4>Golang</h4></div>
+                                <div class="skill-box"><img src="./images/python.png" class="icon"><h4>Python</h4></div>
+                                <div class="skill-box"><img src="./images/html.png" class="icon"><h4>HTML</h4></div>
+                                <div class="skill-box"><img src="./images/css.png" class="icon">CSS</h4></div>
+                                <div class="skill-box"><img src="./images/mysql.png" class="icon"><h4>My SQL</h4></div>
+                                <div class="skill-box"><img src="./images/git.png" class="icon"><h4>GIT</h4></div>
+                                <div class="skill-box"><img src="./images/go.png" class="icon"><h4>Golang</h4></div>
                             </div>
                         </div>
                         <div class="skills-bar">
                             <div class="dividers1"></div>
-                            <i class="fa-solid fa-building-columns bar-icon"></i>
+                            <i class="fa-solid fa-gear bar-icon"></i>
                             <div class="dividers1"></div>
                         </div>
                     </div>
@@ -154,6 +154,50 @@
                                 <div class="dividers"></div>
                                 <h2 class="title">Projets</h2>
                                 <div class="dividers"></div>
+                            </div>
+
+                            <div class="item-projets">
+                                <div class="projet-box">
+                                    <div class="image-container">
+                                        <img class="projet-img" src="./images/projet1.png">
+                                        <div class="button-overlay"><a href="#propos" class="action-button savoir">En savoir plus -></a></div>
+                                    </div>
+                                    <h4>Jeux quadtree</h4>
+                                    <p>Ce projet est un jeux avec une <bold>génération</bold> de terrain infini stocké dans un quadtree en Go. Utilisation de la bibliothèque Ebitengine. Plusieurs <bold>éxtentention</bold> ont été réaliser sur ce projet.</p>
+                                    <i class="fa-brands fa-golang"></i>
+                                </div>
+                                <div class="projet-box">
+                                    <div class="image-container">
+                                        <img class="projet-img" src="./images/projet1.png">
+                                        <div class="button-overlay"><a href="#propos" class="action-button savoir">En savoir plus -></a></div>
+                                    </div>
+                                    <h4>Jeux quadtree</h4>
+                                    <p>Ce projet est un jeux avec une <bold>génération</bold> de terrain infini stocké dans un quadtree en Go. Utilisation de la bibliothèque Ebitengine. Plusieurs <bold>éxtentention</bold> ont été réaliser sur ce projet.</p>
+                                    <i class="fa-brands fa-golang"></i>
+                                </div>
+                                <div class="projet-box">
+                                    <div class="image-container">
+                                        <img class="projet-img" src="./images/projet1.png">
+                                        <div class="button-overlay"><a href="#propos" class="action-button savoir">En savoir plus -></a></div>
+                                    </div>
+                                    <h4>Jeux quadtree</h4>
+                                    <p>Ce projet est un jeux avec une <bold>génération</bold> de terrain infini stocké dans un quadtree en Go. Utilisation de la bibliothèque Ebitengine. Plusieurs <bold>éxtentention</bold> ont été réaliser sur ce projet.</p>
+                                    <i class="fa-brands fa-golang"></i>
+                                </div>
+                            </div>
+
+                            <div class="divider-containers" id="dividers-projet">
+                                <div class="dividers"></div>
+                                <h2 id="contacter" class="title">Me Contacter</h2>
+                                <div class="dividers"></div>
+                            </div>
+
+                            <div class="item-contacter">
+                                <div class="contact-box" onclick="window.location.href='https://fr.linkedin.com/';"><i class="fa-brands fa-linkedin icon-contact"></i></div>
+                                <div class="contacter-divider"></div>
+                                <div class="contact-box" onclick="window.location.href='https://fr.linkedin.com/';"><i class="fa-brands fa-github icon-contact"></i></div>
+                                <div class="contacter-divider"></div>
+                                <div class="contact-box" onclick="window.location.href='https://fr.linkedin.com/';"><i class="fa-regular fa-envelope icon-contact"></i></i></div>
                             </div>
                         </div>
                     </div>
