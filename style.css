@@ -393,6 +393,8 @@ header{
     align-items: end;
     text-align: end;
     margin-left: 5%;
+    margin-top: 23px;
+    margin-bottom: 23px;
 }
 .about-me-desc h2{
     color : transparent;
@@ -475,9 +477,9 @@ header{
     width: 80%;
     align-items:start;
     text-align: start;
-    margin-top: 5%;
-    margin-bottom: 5%;
     margin-right: 5%;
+    margin-top: 23px;
+    margin-bottom: 23px
 }
 .parcours-bar{
     display: flex;
@@ -558,7 +560,8 @@ header{
     align-items: end;
     text-align: end;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 23px;
+    margin-bottom: 23px
 }
 .skills-bar{
     display: flex;
