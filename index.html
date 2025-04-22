@@ -267,6 +267,23 @@
                                 
 
                             })
+                            let lastScrollTop = 0;
+
+                            window.addEventListener("scroll", function () {
+                                const burgerMenu = document.querySelector(".burger-menu");
+                                const burgerCheckbox = document.getElementById("burger-checkbox");
+
+                                const currentScroll = window.scrollY;
+
+                                // Si l'utilisateur scroll vers le bas
+                                if (currentScroll > lastScrollTop && burgerCheckbox.checked) {
+                                    burgerMenu.classList.add("hidden-on-scroll");
+                                } else {
+                                    burgerMenu.classList.remove("hidden-on-scroll");
+                                }
+
+                                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                            });
 
 
                         </script>

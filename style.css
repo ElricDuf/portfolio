@@ -189,6 +189,9 @@ header{
     /*display: block;*/
     transform: scaleY(1); 
 }
+.burger-menu.hidden-on-scroll {
+    transform: scaleY(0) !important; /* Forcer la fermeture même si checkbox cochée */
+}
 /* -------WELCOM---------*/
 
 .welcom {
