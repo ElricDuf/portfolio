@@ -836,6 +836,7 @@ header{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .item-projets p {
@@ -923,6 +924,26 @@ header{
     width: 5px;
     height: 100px;
     background-color: #fff;
+}
+/* -------PIED DE PAGE---------*/
+.remonte{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.remonte img{
+    height: 100px;
+}
+.pied-de-page{
+    height: 45px;
+    background-color: #2376da;
+    text-align: center;
+    color : white;
+    display: flex;
+    justify-content: center; /* axe X : centrer horizontalement */
+    align-items: center;
 }
 
 /* -------RESPONSIVE---------*/
