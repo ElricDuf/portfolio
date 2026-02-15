@@ -343,43 +343,64 @@ body {
 
 .experience-list {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .experience-item {
   background: rgba(16, 22, 21, 0.92);
   border: 1px solid rgba(43, 212, 165, 0.15);
   border-radius: 18px;
-  padding: 1.6rem;
+  padding: 2rem;
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 1.2rem;
+  grid-template-columns: 80px 1fr;
+  gap: 1.8rem;
   align-items: start;
 }
 
 .experience-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
+  width: 80px;
+  height: 80px;
   display: grid;
   place-items: center;
 }
 
 .experience-logo img {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .experience-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.experience-content h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-content h4::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
 }
 
 .experience-content p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 0.98rem;
 }
 
 .skills-panel {
@@ -632,6 +653,31 @@ body {
   }
 }
 
+@media (max-width: 980px) {
+  .about-intro {
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-intro-media {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-item {
+    grid-template-columns: 70px 1fr;
+    gap: 1.5rem;
+    padding: 1.8rem;
+  }
+
+  .experience-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 @media (max-width: 720px) {
   .nav-links {
     position: absolute;
@@ -670,11 +716,22 @@ body {
 
   .experience-item {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
   }
 
   .experience-logo {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+  }
+
+  .experience-content {
+    text-align: center;
+  }
+
+  .experience-content h4 {
+    justify-content: center;
   }
 
   .about {
@@ -717,29 +774,6 @@ body {
 
   .skills-row {
     justify-content: center;
-  }
-}
-
-@media (max-width: 980px) {
-  .about-intro {
-    grid-template-columns: 160px 1fr;
-    gap: 1.5rem;
-  }
-
-  .about-intro-media {
-    width: 160px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 900px) {
-  .experience-item {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-logo {
-    width: 60px;
-    height: 60px;
   }
 }
 
@@ -793,6 +827,19 @@ body {
 
   .experience-item {
     padding: 1.2rem;
+  }
+
+  .experience-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .experience-content h4 {
+    font-size: 0.9rem;
   }
 
   .skill-logo {
