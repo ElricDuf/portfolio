@@ -169,26 +169,6 @@ body {
   justify-content: center;
 }
 
-  .about-intro {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about-intro-media {
-    margin: 0 auto;
-    width: min(220px, 70vw);
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
-
-  .about-location {
-    justify-content: center;
-  }
-
-  .about-linkedin {
-    margin-left: 0.8rem;
-  }
-
 .contact-icons a {
   display: inline-flex;
   align-items: center;
@@ -654,6 +634,29 @@ body {
   }
 }
 
+@media (max-width: 980px) {
+  .about-intro {
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-intro-media {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 @media (max-width: 720px) {
   .nav-links {
     position: absolute;
@@ -695,6 +698,106 @@ body {
   }
 
   .experience-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .about {
+    padding: 3.5rem 6vw 4.5rem;
+  }
+
+  .about-wrap {
+    gap: 2rem;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .about-intro-media {
+    margin: 0 auto;
+    width: min(240px, 70vw);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .about-location {
+    justify-content: center;
+  }
+
+  .about-linkedin {
+    margin-left: 0.8rem;
+  }
+
+  .skills-panel {
+    padding: 1rem;
+  }
+
+  .skill-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .skills-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 3rem 5vw 4rem;
+  }
+
+  .about-intro {
+    padding: 2rem 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 1.6rem;
+  }
+
+  .timeline::before {
+    left: 0.7rem;
+  }
+
+  .timeline-item::before {
+    left: -1.2rem;
+  }
+
+  .skills-panel {
+    border-radius: 18px;
+  }
+
+  .skill-logo {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-intro {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .about-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .timeline-card {
+    padding: 1.2rem;
+  }
+
+  .experience-item {
+    padding: 1.2rem;
+  }
+
+  .skill-logo {
     width: 56px;
     height: 56px;
   }
