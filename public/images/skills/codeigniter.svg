@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="28" fill="#0b0f0e" />
+  <path d="M80 34 C60 48 52 72 60 96 C70 120 96 126 112 112" fill="none" stroke="#2bd4a5" stroke-width="12" stroke-linecap="round" />
+  <text x="80" y="118" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#2bd4a5">CI</text>
+</svg>

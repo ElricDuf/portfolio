@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="28" fill="#0b0f0e" />
+  <circle cx="80" cy="80" r="48" fill="#2bd4a5" fill-opacity="0.18" />
+  <text x="80" y="96" text-anchor="middle" font-size="36" font-family="Arial, sans-serif" fill="#2bd4a5">Node</text>
+</svg>

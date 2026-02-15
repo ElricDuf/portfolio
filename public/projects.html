@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets | Elric Dufresne</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">Elric Dufresne</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" data-nav="links">
+          <a href="projects.html">Projets</a>
+          <a href="about.html">A propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="projects">
+      <section class="carousel" data-carousel>
+        <div class="carousel-track" data-carousel-track>
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/e-commerce.png" alt="e-commerce" />
+            </div>
+            <h3>Site Web de E-Commerce</h3>
+            <p>
+                Développement d'une application web complète sous CodeIgniter 4 et
+                Docker, intégrant des fonctionnalités e-commerce (panier, wallet,
+                messagerie ...) et une interface d'administration pour la gestion des produits et des commandes. 
+            </p>
+            <div class="project-tags">
+              <span>php</span>
+              <span>CodeIgniter 4</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/Capture d'écran 2025-11-09 111055.png" alt="Apercu Qui-est-ce ?" />
+            </div>
+            <h3>Qui-est-ce ?</h3>
+            <p>
+              Jeu "Qui-est-ce ?" développé en Kotlin avec support multijoueur en réseau et une architecture MVC complète.
+            </p>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>MVC</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/truenas.png" alt="Apercu TrueNAS" />
+            </div>
+            <h3>NAS</h3>
+            <p>
+              Conception et déploiement d'un serveur de stockage réseau (NAS) basé sur l'OS TrueNAS Core/Scale pour la centralisation de mes photos et de documents.
+            </p>
+            <div class="project-tags">
+              <span>TrueNas</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/bataille-naval.png" alt="Apercu Bataille Navale" />
+            </div>
+            <h3>Bataille Naval</h3>
+            <p>
+              bataille navale qui permet de jouer contre un ordinateur réaliser en Python. Utilisation de la bibliothèque Tkinter pour l'affichage.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Tkinter</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/boulangerie.png" alt="Apercu boulangerie" />
+            </div>
+            <h3>Site web vitrine</h3>
+            <p>
+              Page d'entreprise pour une boulangerie fictive, avec design moderne et animations CSS.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+              <span>Figma</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="carousel-controls">
+          <div class="carousel-buttons">
+            <button class="carousel-btn" type="button" data-carousel-prev>
+              Precedent
+            </button>
+            <button class="carousel-btn" type="button" data-carousel-next>
+              Suivant
+            </button>
+          </div>
+          <div class="carousel-dots" aria-hidden="true">
+            <button class="carousel-dot is-active" type="button" data-carousel-dot></button>
+            <button class="carousel-dot" type="button" data-carousel-dot></button>
+            <button class="carousel-dot" type="button" data-carousel-dot></button>
+            <button class="carousel-dot" type="button" data-carousel-dot></button>
+            <button class="carousel-dot" type="button" data-carousel-dot></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
